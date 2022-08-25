@@ -1,0 +1,17 @@
+[
+    {
+        "id":1,
+        "food_name":"Seafood Specials",
+        "img":"images/14.jpg"
+    },
+    {
+        "id":2,
+        "food_name":"Seafood Specials",
+        "img":"images/10.jpg"
+    },
+    {
+        "id":3,
+        "food_name":"Seafood Specials",
+        "img":"images/5.jpg"
+    }
+]
