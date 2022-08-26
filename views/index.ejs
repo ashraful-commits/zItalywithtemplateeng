@@ -49,68 +49,18 @@
 						<span>text text text text text</span>
 					</div>
 					<div class="row">
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<span class="ribbon">Menu Card<b></b></span>
-									<img src="images/menu.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
+						<% welcome.forEach(element => { %>
+							<div class="col-1-3">
+								<div class="wrap-col">
+									<div class="box-item">
+										<span class="ribbon"><%= element.ribbon %> <b></b></span>
+										<img src="<%= element.img %> " alt="">
+										<p><%= element.dis %> </p>
+										<a href="#" class="button button-1">Detail</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<span class="ribbon">Fast Food<b></b></span>
-									<img src="images/fast-food.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<span class="ribbon">Reservation<b></b></span>
-									<img src="images/reservation.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<span class="ribbon">Chef<b></b></span>
-									<img src="images/chef.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<span class="ribbon">Preview<b></b></span>
-									<img src="images/preview.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<div class="box-item">
-									<span class="ribbon">Text Heading<b></b></span>
-									<img src="images/reservation.jpg" alt="">
-									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
-									<a href="#" class="button button-1">Detail</a>
-								</div>
-							</div>
-						</div>
+						<% }) %>
 					</div>
 				</div>
 			</div>

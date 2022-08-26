@@ -18,14 +18,16 @@ const app = express();
 // json contact
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+//template engine
 app.set('view engine', 'ejs');
 app.use(exprssLayout);
 app.set('layout', 'layouts/app');
 
+//page router
 app.use(pageRoute);
 app.use(express.static('public'));
 
 // sever creating
 app.listen(port, () => {
-  console.log(`server is running ${port}`.bgYellow);
+  console.log(`server is running ${port}`.bgMagenta);
 });

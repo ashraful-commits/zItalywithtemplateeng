@@ -4,10 +4,20 @@ const fs = require('fs');
 const { parse } = require('path');
 
 const homepageshow = (req, res) => {
-  res.render('index');
+  const welcome = fs.readFileSync(
+    path.join(__dirname, '../db/welcome.json')
+  );
+  res.render('index', {
+    welcome: JSON.parse(welcome.toString()),
+  });
 };
 const archivepageshow = (req, res) => {
-  res.render('archive');
+  const blog = fs.readFileSync(
+    path.join(__dirname, '../db/blog.json')
+  );
+  res.render('archive', {
+    blog: JSON.parse(blog.toString()),
+  });
 };
 const gallerypageshow = (req, res) => {
   const gallery = fs.readFileSync(

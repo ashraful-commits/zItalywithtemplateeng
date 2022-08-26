@@ -1,0 +1,38 @@
+[
+    {
+        "id":"1",
+        "ribbon":"Menu Card",
+        "img":"images/menu.jpg",
+        "dis":"The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!"
+    },
+    {
+        "id":"2",
+        "ribbon":"Fast Food",
+        "img":"images/fast-food.jpg",
+        "dis":"The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!"
+    },
+    {
+        "id":"3",
+        "ribbon":"Reservation",
+        "img":"images/reservation.jpg",
+        "dis":"The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!"
+    },
+    {
+        "id":"4",
+        "ribbon":"Chef",
+        "img":"images/Chef.jpg",
+        "dis":"The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!"
+    },
+    {
+        "id":"5",
+        "ribbon":"Preview",
+        "img":"images/preview.jpg",
+        "dis":"The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!"
+    },
+    {
+        "id":"6",
+        "ribbon":"Text Heading",
+        "img":"images/reservation.jpg",
+        "dis":"The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!"
+    }
+]
