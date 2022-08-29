@@ -2,16 +2,16 @@
     {
         "id":1,
         "food_name":"Fast Food",
-        "img":"images/15.jpg"
+        "img":"/images/15.jpg"
     },
     {
         "id":2,
         "food_name":"Fast Food",
-        "img":"images/10.jpg"
+        "img":"/images/10.jpg"
     },
     {
         "id":3,
         "food_name":"Fast Food",
-        "img":"images/9.jpg"
+        "img":"/images/9.jpg"
     }
 ]

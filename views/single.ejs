@@ -7,24 +7,25 @@
 			<ul>
 				<li><a href="/home">Home</a></li>
 				<li><a href="/blog">Blog</a></li>
+				
 			</ul>
 		</div>
 		<div id="main-content" class="col-2-3">
 			<div class="wrap-content">
-				<% blog.forEach(element => { %>
+				
 					<article>
 						<div class="art-header">
-							<a href="#"><h3><%= element.title %> </h3></a>
-							<div class="info"><%= element.post_time %>  <a href="#">Event</a></div>
+							<a href="#"><h3><%= post.title %> </h3></a>
+							<div class="info"><%= post.post_time %>  <a href="#">Event</a></div>
 						</div>
 						<div class="art-content">
-							<img src="<%= element.img %> " />
-							<p><%= element.dis %> </p>
+							<img src="<%= post.img %> " />
+							<p><%= post.dis %> </p>
 						</div>
-						<a class="button button02" href="/blog/<%= element.id %>">MORE</a>
+						
 					</article>
 					
-				<% }) %>
+				
 			</div>
 		</div>
 		<div id="sidebar" class="col-1-3">

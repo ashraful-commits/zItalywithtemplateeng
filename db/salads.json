@@ -2,16 +2,16 @@
     {
         "id":1,
         "food_name":"Salads",
-        "img":"images/13.jpg"
+        "img":"/images/13.jpg"
     },
     {
         "id":2,
         "food_name":"Salads",
-        "img":"images/5.jpg"
+        "img":"/images/5.jpg"
     },
     {
         "id":3,
         "food_name":"Salads",
-        "img":"images/7.jpg"
+        "img":"/images/7.jpg"
     }
 ]

@@ -2,21 +2,21 @@
     {
         "id":1,
          "name":"Cheff's Name",
-         "img":"images/chef-1.jpg"
+         "img":"/images/chef-1.jpg"
     },
     {
         "id":2,
          "name":"Cheff's Name",
-         "img":"images/chef-2.jpg"
+         "img":"/images/chef-2.jpg"
     },
     {
         "id":3,
          "name":"Cheff's Name",
-         "img":"images/chef-3.jpg"
+         "img":"/images/chef-3.jpg"
     },
     {
         "id":4,
          "name":"Cheff's Name",
-         "img":"images/chef-4.jpg"
+         "img":"/images/chef-4.jpg"
     }
 ]

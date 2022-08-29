@@ -19,6 +19,30 @@ const archivepageshow = (req, res) => {
     blog: JSON.parse(blog.toString()),
   });
 };
+const singlepageshow = (req, res) => {
+  const blog = JSON.parse(
+    fs.readFileSync(path.join(__dirname, '../db/blog.json'))
+  );
+
+  const singlepost = blog.find((data) => data.id == req.params.id);
+
+  res.render('single', {
+    post: singlepost,
+  });
+};
+const singlehomepageshow = (req, res) => {
+  const welcome = JSON.parse(
+    fs.readFileSync(path.join(__dirname, '../db/welcome.json'))
+  );
+
+  const wellcomesinglepost = welcome.find(
+    (data) => data.id == req.params.id
+  );
+
+  res.render('singlehome', {
+    post: wellcomesinglepost,
+  });
+};
 const gallerypageshow = (req, res) => {
   const gallery = fs.readFileSync(
     path.join(__dirname, '../db/gallery.json')
@@ -83,4 +107,6 @@ module.exports = {
   newspageshow,
   reservationpageshow,
   staffpageshow,
+  singlepageshow,
+  singlehomepageshow,
 };

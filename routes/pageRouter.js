@@ -8,6 +8,8 @@ const {
   newspageshow,
   reservationpageshow,
   staffpageshow,
+  singlepageshow,
+  singlehomepageshow,
 } = require('../controllers/pageControllers');
 
 const router = express.Router();
@@ -15,6 +17,8 @@ const router = express.Router();
 router.get('/', homepageshow);
 router.get('/home', homepageshow);
 router.get('/blog', archivepageshow);
+router.get('/blog/:id', singlepageshow);
+router.get('/home/:id', singlehomepageshow);
 router.get('/gallery', gallerypageshow);
 router.get('/location', locationpageshow);
 router.get('/menu', menupageshow);
