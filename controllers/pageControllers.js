@@ -7,8 +7,12 @@ const homepageshow = (req, res) => {
   const welcome = fs.readFileSync(
     path.join(__dirname, '../db/welcome.json')
   );
+  const slider = fs.readFileSync(
+    path.join(__dirname, '../db/slider.json')
+  );
   res.render('index', {
     welcome: JSON.parse(welcome.toString()),
+    slider: JSON.parse(slider.toString()),
   });
 };
 const archivepageshow = (req, res) => {
