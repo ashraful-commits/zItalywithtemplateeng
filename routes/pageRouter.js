@@ -10,6 +10,7 @@ const {
   staffpageshow,
   singlepageshow,
   singlehomepageshow,
+  sendEmail,
 } = require('../controllers/pageControllers');
 
 const router = express.Router();
@@ -24,6 +25,7 @@ router.get('/location', locationpageshow);
 router.get('/menu', menupageshow);
 router.get('/news', newspageshow);
 router.get('/reservation', reservationpageshow);
+router.post('/contact', sendEmail);
 router.get('/staff', staffpageshow);
 
 module.exports = router;

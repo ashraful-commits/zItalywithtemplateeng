@@ -2,6 +2,7 @@ const path = require('path');
 const url = require('url');
 const fs = require('fs');
 const { parse } = require('path');
+const nodemailer = require('nodemailer');
 
 const homepageshow = (req, res) => {
   const welcome = fs.readFileSync(
@@ -102,6 +103,24 @@ const staffpageshow = (req, res) => {
   });
 };
 
+// contact form
+const sendEmail = (req, res) => {
+  const transpoter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    auth: {
+      user: 'ashrafulalam10000@gmail.com',
+      pass: 'gaqcgjhvmjslshqu',
+    },
+  });
+  transpoter.sendMail({
+    from: 'ashrafulalam10000@gmail.com',
+    to: req.body.email,
+    subject: 'everything sucessfully done !',
+    text: `hi ${req.body.name}, how are you ?`,
+  });
+  res.json(req.body);
+};
 module.exports = {
   homepageshow,
   archivepageshow,
@@ -113,4 +132,5 @@ module.exports = {
   staffpageshow,
   singlepageshow,
   singlehomepageshow,
+  sendEmail,
 };
