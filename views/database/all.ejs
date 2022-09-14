@@ -1,0 +1,194 @@
+<div class="container dashboard my-5">
+    <div class="row my-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-primary">
+                    <h1 class="text-center text-white ">Dashboard</h1>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item btn btn-outline-primary blog_btn">Blog</li>
+                        <li class="list-group-item btn-outline-danger btn food_btn">Food</li>
+                        <li class="list-group-item btn-outline-success btn slider_btn">Slider</li>
+                        <li class="list-group-item btn-outline-warning btn staff_btn">staff</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+           <div class="content content1">
+            <div class="card shadow">
+                <div class="card-header">
+                    <a  class="btn btn-primary w-100" href="/blogpost">Add new Blog</a>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped blog-table" style="table-layout:fixed; white-space: nowrap ;" >
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Photo</th>
+                                <th>Title</th>
+                                <th>Discription</th>
+                                <th>Post Time</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <% blog.forEach(element => { %>
+                            <tr>
+                                <td><%= element.id %> </td>
+                                <td>
+                                    <% if (element.img == '1.jpg') { %>
+                                        <img style="width: 50px;height:50px" src="/images/<%= element.img %> " alt="">
+                                        <% } else { %>
+                                            <img style="width: 50px;height:50px" src="/images/<%= element.img %> " alt="">
+
+                                    <% } %>
+                                </td>
+                                <td style="overflow:hidden;text-overflow:ellipsis"><%= element.title %> </td>
+                                <td style="overflow:hidden;text-overflow:ellipsis"><%= element.dis %> </td>
+                                <td><%= element.post_time %> </td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm" href="/admin/<%= element.id %> "><i class="fas fa-eye"></i></a>
+                                    <a class="btn btn-warning" btn-sm href="/admin/<%= element.id %> "><i class="fas fa-edit"></i> </a>
+                                    <a class="btn btn-danger delete-btn" btn-sm href="/admin/<%= element.id %> "><i class="fas fa-trash"></i></a>
+                                </td>
+                                
+                            </tr>
+                           <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+           </div>
+           <div class="content content2">
+            <div class="card shadow">
+                <div class="card-header">
+                    <a  class="btn btn-danger w-100" href="/food">Add new Food</a>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped blog-table" style="table-layout:fixed; white-space: nowrap ;" >
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Photo</th>
+                                <th>Title</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <% food.forEach(element => { %>
+                            <tr>
+                                <td><%= element.id %> </td>
+                                <td>
+                                    <% if (element.img == '1.jpg') { %>
+                                        <img style="width: 50px;height:50px" src="/images/<%= element.img %> " alt="">
+                                        <% } else { %>
+                                            <img style="width: 50px;height:50px" src="/food/<%= element.img %> " alt="">
+
+                                    <% } %>                             
+                                </td>
+                                <td style="overflow:hidden;text-overflow:ellipsis"><%= element.title %> </td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm" href="/admin/<%= element.id %> "><i class="fas fa-eye"></i></a>
+                                    <a class="btn btn-warning" btn-sm href="/admin/<%= element.id %> "><i class="fas fa-edit"></i> </a>
+                                    <a class="btn btn-danger delete-food" btn-sm href="/admin/<%= element.id %> "><i class="fas fa-trash"></i></a>
+                                </td>
+                                
+                            </tr>
+                           <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+           </div>
+           <div class="content content3">
+            <div class="card shadow">
+                <div class="card-header">
+                    <a  class="btn btn-success w-100" href="/slider">Add new Slider</a>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped blog-table" style="table-layout:fixed; white-space: nowrap ;" >
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Photo</th>
+                                <th>Title</th>
+                                <th>Discription</th>
+                                <th>Post Time</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <% slider.forEach(element => { %>
+                            <tr>
+                                <td><%= element.id %> </td>
+                                <td>
+                                    <% if (element.img == '1.jpg') { %>
+                                        <img style="width: 50px;height:50px" src="/images/<%= element.img %> " alt="">
+                                        <% } else { %>
+                                            <img style="width: 50px;height:50px" src="/slider/<%= element.img %> " alt="">
+
+                                    <% } %>
+                                </td>
+                                <td style="overflow:hidden;text-overflow:ellipsis"><%= element.title %> </td>
+                                <td style="overflow:hidden;text-overflow:ellipsis"><%= element.dis %> </td>
+                                <td><%= element.post_time %> </td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm" href="/admin/<%= element.id %> "><i class="fas fa-eye"></i></a>
+                                    <a class="btn btn-warning" btn-sm href="/admin/<%= element.id %> "><i class="fas fa-edit"></i> </a>
+                                    <a class="btn btn-danger delete-slider" btn-sm href="/admin/<%= element.id %> "><i class="fas fa-trash"></i></a>
+                                </td>
+                                
+                            </tr>
+                           <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+           </div>
+           <div class="content content4">
+            <div class="card shadow">
+                <div class="card-header">
+                    <a  class="btn btn-warning w-100" href="/staffpost">Add new Staff</a>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped blog-table" style="table-layout:fixed; white-space: nowrap ;" >
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Photo</th>
+                                <th>Title</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <% staff.forEach(element => { %>
+                            <tr>
+                                <td><%= element.id %> </td>
+                                <td>
+                                    <% if (element.img == '9.jpg') { %>
+                                        <img style="width: 50px;height:50px" src="/images/<%= element.img %> " alt="">
+                                        <% } else { %>
+                                            <img style="width: 50px;height:50px" src="/staff/<%= element.img %> " alt="">
+
+                                    <% } %>
+                                </td>
+                                <td style="overflow:hidden;text-overflow:ellipsis"><%= element.title %> </td>
+                               
+                                <td>
+                                    <a class="btn btn-primary btn-sm" href="/admin/<%= element.id %> "><i class="fas fa-eye"></i></a>
+                                    <a class="btn btn-warning" btn-sm href="/admin/<%= element.id %> "><i class="fas fa-edit"></i> </a>
+                                    <a class="btn btn-danger delete-staff" btn-sm href="/admin/<%= element.id %> "><i class="fas fa-trash"></i></a>
+                                </td>
+                                
+                            </tr>
+                           <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+</div>

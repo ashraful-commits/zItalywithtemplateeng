@@ -4,7 +4,9 @@
 			<ul class="rslides" id="slider4">
 				<% slider.reverse().forEach(element => { %>
 					<li>
-						<img src="<%= element.img %> " alt="">
+						
+							<img src="/slider/<%=element.img %> " alt="">
+						
 						<div class="caption">
 							<h2><%= element.title %> </h2></br>
 							<p><%= element.dis %> </p>

@@ -394,4 +394,16 @@ a.button.bt2 {}
 }
 .zoom-container:hover .zoom-caption {
 	background: none;
-}		
+}
+
+.dashboard{
+	overflow: hidden;
+}
+.dashboard .content{
+	
+	position: absolute;
+	transform: translateX(100%);
+}
+.dashboard .content1{
+	transform: translateX(0px);
+}

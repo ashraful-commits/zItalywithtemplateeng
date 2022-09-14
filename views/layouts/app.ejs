@@ -11,18 +11,23 @@
 	<title>zItalyFood | Free Restaurant Html5 Templates</title>
 	<meta name="description" content="Free Responsive Html5 Css3 Templates | zerotheme.com">
 	<meta name="author" content="www.zerotheme.com">
-	
     <!-- Mobile Specific Metas
-  ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <!-- CSS
-  ================================================== -->
+		================================================== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<!-- CSS
+			================================================== -->
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   	<link rel="stylesheet" href="/css/zerogrid.css">
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/slide.css">
 	<link rel="stylesheet" href="/css/menu.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.css"/>
+ 
+
 	<!-- Custom Fonts -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<!--[if lt IE 8]>
        <div style=' clear: both; text-align:center; position: relative;'>
@@ -69,7 +74,7 @@
 		</div>
 	</div>
     <!--//////////////////////////////////////Menu-->
-    <a href="#" class="nav-toggle">Toggle Navigation</a>
+    <a href="#" class="nav-add">Toggle Navigation</a>
     <nav class="cmn-tile-nav">
 		<ul class="clearfix">
 			<li class="colour-1"><a href="/home">Home</a></li>
@@ -149,10 +154,11 @@
 
 
 	<!-- js -->
+	<script src="/js/jquery-1.11.3.min.js"></script>
 	<script src="/js/classie.js"></script>
 	<script src="/js/demo.js"></script>
-
-	<script src="/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>les.net/v/dt/dt-1.12.1/datatables.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src="/js/responsiveslides.min.js"></script>
 	<script>
 	$(function () {
@@ -171,6 +177,102 @@
 		}
 	  });
 	});
+
+	const delete_btn = document.querySelectorAll('.delete-btn');
+	const delete_food = document.querySelectorAll('.delete-food');
+	const delete_slider = document.querySelectorAll('.delete-slider');
+	const delete_staff = document.querySelectorAll('.delete-staff');
+	delete_btn.forEach((item)=>{
+		item.onclick =()=>{
+			const conf = confirm('are you sure ?')
+			if(conf == true){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	})
+	delete_food.forEach((item)=>{
+		item.onclick =()=>{
+			const conf = confirm('are you sure ?')
+			if(conf == true){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	})
+	delete_slider.forEach((item)=>{
+		item.onclick =()=>{
+			const conf = confirm('are you sure ?')
+			if(conf == true){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	})
+	delete_staff.forEach((item)=>{
+		item.onclick =()=>{
+			const conf = confirm('are you sure ?')
+			if(conf == true){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	})
+
+
+
+	$('.blog-table').DataTable()
+	$('.food-table').DataTable()
+	$('.slider-table').DataTable()
+	$('.staff-table').DataTable()
+
+
+	//////////////////////////////////////
+	const content1 = document.querySelector('.content1')
+	const content2= document.querySelector('.content2')
+	const content3 = document.querySelector('.content3')
+	const content4 = document.querySelector('.content4')
+	const btn_blog = document.querySelector('.blog_btn')
+	const btn_food = document.querySelector('.food_btn')
+	const btn_slider = document.querySelector('.slider_btn')
+	const btn_staff = document.querySelector('.staff_btn')
+
+	
+		
+		btn_blog.onclick = ()=>{
+			
+		content1.style.transform = 'translateX(0%)'
+		content2.style.transform = 'translateX(100%)'
+		content3.style.transform = 'translateX(100%)'
+		content4.style.transform = 'translateX(100%)'
+	}
+	btn_food.onclick = ()=>{
+		
+		content1.style.transform = 'translateX(100%)'
+		content2.style.transform = 'translateX(0%)'
+		content3.style.transform = 'translateX(100%)'
+		content4.style.transform = 'translateX(100%)'
+	}
+	btn_slider.onclick = ()=>{
+		content1.style.transform = 'translateX(100%)'
+		content2.style.transform = 'translateX(100%)'
+		content3.style.transform = 'translateX(0%)'
+		content4.style.transform = 'translateX(100%)'
+	}
+	btn_staff.onclick = ()=>{
+	
+		content1.style.transform = 'translateX(100%)'
+		content2.style.transform = 'translateX(100%)'
+		content3.style.transform = 'translateX(100%)'
+		content4.style.transform = 'translateX(0%)'
+		
+	}
+	
+	
 	</script>
 </div>
 </body></html>

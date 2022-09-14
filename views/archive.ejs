@@ -18,7 +18,12 @@
 							<div class="info"><%= element.post_time %>  <a href="#">Event</a></div>
 						</div>
 						<div class="art-content">
-							<img src="<%= element.img %> " />
+							<% if (element.img == '') { %>
+								<img src="/images/<%= element.img %> " />
+								<% } else { %>
+									<img src="/images/<%= element.img %> " />
+							<% } %>
+							
 							<p><%= element.dis %> </p>
 						</div>
 						<a class="button button02" href="/blog/<%= element.id %>">MORE</a>
